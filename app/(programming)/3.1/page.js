@@ -51,7 +51,7 @@ const Sorting = () => {
           </button>
         </div>
         <p className="text-center text-white mt-4 font-medium">
-          Data yang sudah diurutkan: <br /> {sortedData}
+          Sorted Data : <br /> {sortedData}
         </p>
       </div>
     </article>
