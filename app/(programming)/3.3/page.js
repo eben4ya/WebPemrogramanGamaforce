@@ -40,7 +40,8 @@ const Distance = () => {
   return (
     <section className="flex min-h-screen flex-col items-center justify-center bg-[#121212] text-white">
       <div className="flex flex-col justify-start items-start">
-        <h2 className="text-3xl font-bold mb-4 mx-auto">Distance Calculator</h2>
+        <GoBack />
+        <h2 className="text-3xl font-bold mb-4 mx-auto mt-8" >Distance Calculator</h2>
         <div className="mb-4">
           <label className="text-lg">Latitude 1 &nbsp; &nbsp; :</label>
           <input
@@ -113,7 +114,6 @@ const Distance = () => {
           </p>
         )}
       </div>
-      <GoBack />
     </section>
   );
 };

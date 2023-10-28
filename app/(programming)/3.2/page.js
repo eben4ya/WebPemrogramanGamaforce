@@ -28,31 +28,33 @@ const Pascal = () => {
   const pascalTriangle = generatePascalTriangle(numRows);
 
   return (
-    <section className="flex min-h-screen flex-col text-white items-center justify-center gap-y-8 bg-[#121212]">
-      <h2 className="text-3xl font-bold ">Pascal&rsquo;s Triangle</h2>
-      <div className="flex flex-row justify-center items-center">
-        <label className="md:text-lg text-sm">Number of Rows: </label>
-        <input
-          type="number"
-          value={numRows}
-          onChange={(e) => setNumRows(e.target.value)}
-          className="md:px-3 md:py-2 px-2 py-1 text-gray-800 border border-gray-300 rounded-md ml-2 focus:outline-none focus:ring focus:border-white"
-        />
+    <section className="flex min-h-screen flex-col text-white items-center justify-center  bg-[#121212]">
+      <div className="flex flex-col items-center justify-center gap-y-8">
+        <GoBack />
+        <h2 className="text-3xl font-bold ">Pascal&rsquo;s Triangle</h2>
+        <div className="flex flex-row justify-center items-center">
+          <label className="md:text-lg text-sm">Number of Rows: </label>
+          <input
+            type="number"
+            value={numRows}
+            onChange={(e) => setNumRows(e.target.value)}
+            className="md:px-3 md:py-2 px-2 py-1 text-gray-800 border border-gray-300 rounded-md ml-2 focus:outline-none focus:ring focus:border-white"
+          />
+        </div>
+        <table className="mt-4">
+          <tbody>
+            {pascalTriangle.map((row, rowIndex) => (
+              <tr key={rowIndex}>
+                {row.map((value, columnIndex) => (
+                  <td key={columnIndex} className="p-2 border border-gray-300">
+                    {value}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-      <table className="mt-4">
-        <tbody>
-          {pascalTriangle.map((row, rowIndex) => (
-            <tr key={rowIndex}>
-              {row.map((value, columnIndex) => (
-                <td key={columnIndex} className="p-2 border border-gray-300">
-                  {value}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <GoBack />
     </section>
   );
 };

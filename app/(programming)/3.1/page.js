@@ -31,7 +31,8 @@ const Sorting = () => {
   return (
     <article className="flex min-h-screen flex-col items-center justify-center bg-[#121212]">
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-white text-center font-bold text-3xl mb-8">
+        <GoBack />
+        <h1 className="text-white text-center font-bold text-3xl my-8">
           Sorting
         </h1>
         <div className="flex flex-row gap-4">
@@ -52,7 +53,6 @@ const Sorting = () => {
         <p className="text-center text-white mt-4">
           Data yang sudah diurutkan: <br /> {sortedData}
         </p>
-        <GoBack />
       </div>
     </article>
   );

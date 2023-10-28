@@ -24,7 +24,7 @@ const Profile = () => {
               1000, // wait 1s before replacing "Mice" with "Hamsters"
               "I'm TIF 22",
               1000,
-              "I ❤️ in Webdev & ML",
+              "I ❤️ Webdev & ML",
               1000,
             ]}
             wrapper="span"
