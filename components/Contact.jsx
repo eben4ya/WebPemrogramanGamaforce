@@ -20,7 +20,7 @@ const Contact = () => {
     <section className="flex flex-row justify-center items-center gap-4 mt-4 ">
       {contact.map((item, index) => (
         <div className="relative w-[50px] h-[50px] " key={index}>
-          <Link href={item.href}>
+          <Link href={item.href} rel="noopener norefferer" target="_blank" >
             <Image
               src={item.src}
               alt={item.name}
