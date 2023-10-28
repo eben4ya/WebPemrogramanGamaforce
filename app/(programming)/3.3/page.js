@@ -34,20 +34,28 @@ const Distance = () => {
     const distanceInKilometers = R * c;
     const distanceInMeters = distanceInKilometers * 1000;
 
-    setDistance(distanceInMeters);
+    // Menghitung jarak dengan mempertimbangkan ketinggian
+    const altitudeDifference = Math.abs(alt2 - alt1);
+    const altitudeCorrection = Math.sqrt(
+      Math.pow(distanceInMeters, 2) + Math.pow(altitudeDifference, 2)
+    );
+
+    setDistance(altitudeCorrection);
   };
 
   return (
     <section className="flex min-h-screen flex-col items-center justify-center bg-[#121212] text-white">
       <div className="flex flex-col justify-start items-start">
         <GoBack />
-        <h2 className="text-3xl font-bold mb-4 mx-auto mt-8" >Distance Calculator</h2>
+        <h2 className="text-3xl font-bold mb-4 mx-auto mt-8">
+          Distance Calculator
+        </h2>
         <div className="mb-4">
           <label className="text-lg">Latitude 1 &nbsp; &nbsp; :</label>
           <input
             type="number"
             value={lat1}
-            placeholder="ex: -6.175392"
+            placeholder="-7.773582754024955"
             onChange={(e) => setLat1(e.target.value)}
             className="w-fit p-2 text-gray-800 border border-gray-300 rounded-md ml-2 focus:outline-none focus:ring focus:border-white"
           />
@@ -57,7 +65,7 @@ const Distance = () => {
           <input
             type="number"
             value={lon1}
-            placeholder="ex: 106.827153"
+            placeholder="110.37835762865194"
             onChange={(e) => setLon1(e.target.value)}
             className="w-fit p-2 text-gray-800 border border-gray-300 rounded-md ml-2 focus:outline-none focus:ring focus:border-white"
           />
@@ -67,7 +75,7 @@ const Distance = () => {
           <input
             type="number"
             value={alt1}
-            placeholder="ex: 0"
+            placeholder="0"
             onChange={(e) => setAlt1(e.target.value)}
             className="w-fit p-2 text-gray-800 border border-gray-300 rounded-md ml-2 focus:outline-none focus:ring focus:border-white"
           />
@@ -77,7 +85,7 @@ const Distance = () => {
           <input
             type="number"
             value={lat2}
-            placeholder="ex: -6.175392"
+            placeholder="-7.76577812886872"
             onChange={(e) => setLat2(e.target.value)}
             className="w-fit p-2 text-gray-800 border border-gray-300 rounded-md ml-2 focus:outline-none focus:ring focus:border-white"
           />
@@ -87,7 +95,7 @@ const Distance = () => {
           <input
             type="number"
             value={lon2}
-            placeholder="ex: 106.827153"
+            placeholder="110.37176985136855"
             onChange={(e) => setLon2(e.target.value)}
             className="w-fit p-2 text-gray-800 border border-gray-300 rounded-md ml-2 focus:outline-none focus:ring focus:border-white"
           />
@@ -97,7 +105,7 @@ const Distance = () => {
           <input
             type="number"
             value={alt2}
-            placeholder="ex: 10"
+            placeholder="10"
             onChange={(e) => setAlt2(e.target.value)}
             className="w-fit p-2 text-gray-800 border border-gray-300 rounded-md ml-2 focus:outline-none focus:ring focus:border-white"
           />
