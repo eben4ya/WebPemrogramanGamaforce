@@ -45,7 +45,7 @@ const Distance = () => {
 
   return (
     <section className="flex min-h-screen flex-col items-center justify-center bg-[#121212] text-white">
-      <div className="flex flex-col justify-start items-start">
+      <div className="flex flex-col justify-start items-start font-medium">
         <GoBack />
         <h2 className="text-3xl font-bold mb-4 mx-auto mt-8">
           Distance Calculator
@@ -112,7 +112,7 @@ const Distance = () => {
         </div>
         <button
           onClick={calculateDistance}
-          className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 mx-auto"
+          className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 mx-auto font-semibold"
         >
           Calculate Distance
         </button>

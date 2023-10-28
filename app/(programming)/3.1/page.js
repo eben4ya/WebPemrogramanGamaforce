@@ -44,13 +44,13 @@ const Sorting = () => {
             onChange={(e) => setInput(e.target.value)}
           />
           <button
-            className="py-2 px-4 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600"
+            className="py-2 px-4 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 font-semibold"
             onClick={handleSort}
           >
             Sort
           </button>
         </div>
-        <p className="text-center text-white mt-4">
+        <p className="text-center text-white mt-4 font-medium">
           Data yang sudah diurutkan: <br /> {sortedData}
         </p>
       </div>

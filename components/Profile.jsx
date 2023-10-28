@@ -32,7 +32,7 @@ const Profile = () => {
             repeat={Infinity}
           />
         </h1>
-        <p className="text-[#ADB7BE] text-lg ">see my gamaforce assignment</p>
+        <p className="text-[#ADB7BE] text-lg font-medium ">see my gamaforce assignment</p>
       </section>
     
   );

@@ -33,7 +33,7 @@ const Pascal = () => {
         <GoBack />
         <h2 className="text-3xl font-bold ">Pascal&rsquo;s Triangle</h2>
         <div className="flex flex-row justify-center items-center">
-          <label className="md:text-lg text-sm">Number of Rows: </label>
+          <label className="md:text-lg text-sm font-medium">Number of Rows: </label>
           <input
             type="number"
             value={numRows}

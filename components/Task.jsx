@@ -24,7 +24,7 @@ const Task = () => {
         <Link
           key={index}
           href={item.url}
-          className=" text-white text-2xl text-center bg-black border border-white rounded-full p-2 "
+          className=" text-white text-2xl text-center font-semibold bg-black border-2 border-white  rounded-full p-2 hover:opacity-70"
         >
           {item.task}
         </Link>
