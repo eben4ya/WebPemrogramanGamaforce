@@ -3,16 +3,16 @@ import Link from "next/link";
 
 const list = [
   {
-    task: "Programming 3.1",
+    task: "Program 3.1",
 
     url: "/3.1",
   },
   {
-    task: "Programming 3.2",
+    task: "Program 3.2",
     url: "/3.2",
   },
   {
-    task: "Programming 3.3",
+    task: "Program 3.3",
     url: "/3.3",
   },
 ];
